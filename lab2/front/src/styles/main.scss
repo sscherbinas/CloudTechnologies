@@ -1,0 +1,144 @@
+$dark: #111;
+$dark_grey: #282828;
+$grey: #959595;
+$text_color: #222;
+
+.content {
+  &__container {
+    background: #88d;
+    color: $grey;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 30%;
+  }
+}
+
+.row {
+  display: flex;
+  margin-bottom: 5px;
+
+  & > * {
+    margin-right: 20px;
+  }
+}
+
+.header {
+  &__title {
+    background: #88d;
+    color: $text_color;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px;
+    font-size: 40px;
+    font-weight: 700;
+  }
+}
+
+.add-panel {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+
+    & > * {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+
+  &__submit {
+    color: white;
+    font-size: 24px;
+    margin: 10px;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    background: #f33;
+    transition: all 0.1s;
+    
+    &:hover {
+      background: #fff4;
+    }
+
+    &:active {
+      background: #fff6;
+    }
+  }
+
+  &__input {
+    border: 1px solid $text_color;
+    background: transparent;
+    color: $text_color;
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+
+    &::placeholder {
+      color: #444;
+    }
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 2;
+
+  &__item {
+    &__container {
+      width: 90%;
+      background: #55f;
+      padding: 15px;
+      margin-top: 15px;
+      color: white;
+
+      &:hover {
+        background: #44f;
+      }
+    }
+
+    &__ {
+      &name,
+      &quantity,
+      &department,
+      &producer,
+      &market_adress {
+        color: #999;
+
+        & strong {
+          color: #aaa;
+        }
+      }
+    }
+
+    &__name {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    &__delete {
+      background-color: #33f;
+      color: #fff;
+      font-weight: bold;
+      font-size: 30px;
+      width: 50px;
+      height: 90px;
+      border-radius: 2px;
+      float: right;
+      cursor: pointer;
+      text-transform: lowercase;
+
+      &:hover {
+        background-color: #00c;
+      }
+    }
+  }
+}
